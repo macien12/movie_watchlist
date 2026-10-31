@@ -5,6 +5,9 @@ html, body {
 
 body {
     font-family: "Inter", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -42,4 +45,38 @@ header a {
     gap: 0;
     align-items: center;
     justify-content: center;
+
+    transform: translateY(-25%);
+}
+.hidden {
+    display: none;
+}
+
+main {
+    flex: 1;
+    display: grid;
+    place-items: center;
+}
+
+.placeholder-image {
+    width: 60px;
+    height: auto;
+    opacity: 0.4;
+}
+
+.placeholder-text {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.placeholder-el {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+    color: gray;
+
 }
