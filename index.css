@@ -27,27 +27,66 @@ header a {
 }
 
 .search-Input {
+    flex: 3;
+    min-width: 0;
+    padding: 1rem 1rem 1rem 3rem;
     background-image: url(img/magnifying-glass-solid.png);
-    padding: 1rem 2rem;
-    background-position: 12px center; 
-    background-size: 1em 1em;
     background-repeat: no-repeat;
-    border: solid 1px gray;
+    background-position: 1rem center;
+    background-size: 1rem;
+
+    border: none;
+    outline: none;
+    font-size: 1rem;
 }
 
 .search-btn {
-    padding: 1rem 2rem;
-    border: solid 1px gray;
+    flex: 1;
+
+    padding: 1rem;
+
+    border: none;
+    border-left: 1px solid #D1D5DB;
+
+    background-color: #F9FAFB;
+
+    color: #374151;
+    font-size: 1rem;
+    cursor: pointer;
 }
+
+.search-btn:hover {
+    background-color: #E5E7EB;
+}
+
+
 
 .search-elements {
     display: flex;
-    gap: 0;
-    align-items: center;
+    padding: 0 rem;
     justify-content: center;
 
-    transform: translateY(-25%);
+    transform: translateY(-50%);
 }
+
+.search-elements form {
+    display: flex;
+    width: min(100%, 550px);
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+
+    background-color: white;
+    overflow: hidden;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-elements form:focus-within {
+    outline: 2px solid #9CA3AF;
+    outline-offset: 2px;
+}
+
+
 .hidden {
     display: none;
 }
