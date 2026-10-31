@@ -1,0 +1,64 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("img/movie_watchlist_header.jpg") center / cover;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+header a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+main {
+    flex: 1;
+    display: grid;
+    place-items: center;
+}
+
+.placeholder-el {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder-el p {
+    color: #DFDDDD;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.placeholder-el a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+.placeholder-el a img {
+    width: 24px;
+    height: 24px;
+}
