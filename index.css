@@ -2,3 +2,44 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+header {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("img/movie_watchlist_header.jpg") center / cover;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+header a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+}
+
+.search-Input {
+    background-image: url(img/magnifying-glass-solid.png);
+    padding: 1rem 2rem;
+    background-position: 12px center; 
+    background-size: 1em 1em;
+    background-repeat: no-repeat;
+    border: solid 1px gray;
+}
+
+.search-btn {
+    padding: 1rem 2rem;
+    border: solid 1px gray;
+}
+
+.search-elements {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    justify-content: center;
+}
