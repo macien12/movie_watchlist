@@ -30,7 +30,6 @@ function handleClick(e) {
                 const moviePromises = data.Search.map(movie => {
                     return fetch(`https://www.omdbapi.com/?apikey=c67ce49e&i=${movie.imdbID}`)
                     .then(res => res.json())
-                    watchlistArr.push(movie)
                 })
 
                 return Promise.all(moviePromises)
