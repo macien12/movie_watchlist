@@ -22,8 +22,6 @@ function handleClick(e) {
     fetch(`https://www.omdbapi.com/?apikey=c67ce49e&s=${encodeURIComponent(movieTitle)}`)
             .then(res => res.json())
             .then(data => {
-                
-
 
                 if(data.Response === "False") {
                     placeholderSection.classList.add("hidden")
@@ -90,8 +88,6 @@ function handleWatchlist(movie) {
 
     console.log(`Movie added to watchlist ${movie.Title}`)
 }
-
-// watchlistButton.addEventListener("click", handleWatchlist)
 
 formEl.addEventListener("submit", handleClick)
 
