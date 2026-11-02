@@ -3,6 +3,8 @@ const buttonEl = document.getElementById("search-button")
 const formEl = document.getElementById("form-element")
 const placeholderSection = document.getElementById("placeholder-section")
 const movieResults = document.getElementById("movie-results")
+const watchlistButton = document.getElementById("watchlist-button")
+let WatchlistArr = []
 
 
 
@@ -57,7 +59,7 @@ function handleClick(e) {
                             <div class="movie-details">
                                 <p>${movie.Runtime}</p>
                                 <p>${movie.Genre}</p>
-                                <button type="button"><img src="img/circle-plus-solid-full.svg"> Watchlist</button>
+                                <button type="button" id="watchlist-button"><img src="img/circle-plus-solid-full.svg"> Watchlist</button>
                             </div>
 
                             <p>${movie.Plot}</p>
@@ -69,8 +71,13 @@ function handleClick(e) {
                 placeholderSection.classList.add("hidden")
                 movieResults.innerHTML = htmlEl
             })
-
- 
 }
+
+function handleWatchlist(movie) {
+    
+    const movieList = localStorage.setItem(movie);
+}
+
+// watchlistButton.addEventListener("click", handleWatchlist)
 
 formEl.addEventListener("submit", handleClick)
