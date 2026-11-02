@@ -30,7 +30,7 @@ function handleClick(e) {
 
             })
 document.getElementById("placeholder-section") = htmlEl
-}
+)}
 
 
 
