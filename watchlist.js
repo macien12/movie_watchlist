@@ -37,9 +37,16 @@ movieResults.addEventListener("click", function(e) {
     
     const movieId = button.dataset.id
 
-    const selectedMovie = watchlistArr.find(movie => 
-        movie.imdbID === movieId
+    const movieIndex = movieId.findIndex(movie => 
+        movie.imdID === movieId
     )
+
+    if (movieIndex !== -1) {
+        watchlistArr.splice(movieIndex, 1)
+
+        handleRender()
+    }
+    
 })
 
 handleRender(watchlistArr)
