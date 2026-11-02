@@ -105,4 +105,5 @@ movieResults.addEventListener("click", function(e) {
     if(selectedMovie) {
         handleWatchlist(selectedMovie)
     }
+
 })
