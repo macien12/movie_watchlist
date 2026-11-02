@@ -78,7 +78,7 @@ function handleWatchlist(movie) {
     )
 
     if (alreadySaved) {
-        console.log("movie saved")
+        console.log("movie already saved")
         return
     }
 
