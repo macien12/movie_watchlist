@@ -26,10 +26,6 @@ header a {
     color: white;
 }
 
-.hidden {
-    display: none;
-}
-
 main {
     flex: 1;
     display: grid;
@@ -61,4 +57,54 @@ main {
 .placeholder-el a img {
     width: 24px;
     height: 24px;
+}
+
+.movie-card {
+    display: flex;
+    margin-bottom: 2em;
+    gap: 1em;
+    border-bottom: 1px solid #E5E7EB;
+    padding-bottom: 20px;
+}
+
+.movie-card img {
+    height: 150px;
+    border-radius: 5%;
+} 
+
+.movie-card h3 {
+    margin: 0;
+}
+
+.movie-card button {
+    border: none;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    cursor: pointer;
+}
+
+.movie-card button img {
+    width: 24px;
+    height: 24px;
+}
+
+.movie-details {
+    display: flex;
+    gap: 0.3em;
+    font-size: 0.9rem;
+}
+
+.movie-info > p {
+    color: #6B7280;
+}
+
+.movie-title {
+    display: flex;
+    gap: 1rem;
+}
+
+.hidden {
+    display: none;
 }
