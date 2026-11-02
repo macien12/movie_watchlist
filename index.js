@@ -1,12 +1,35 @@
 const searchEl = document.getElementById("search-field")
 const buttonEl = document.getElementById("search-button")
-const formEl = document.querySelector("form-element")
+const formEl = document.getElementById("form-element")
 
 
-function handleClick(title) {
-    fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=c67ce49e&t=${title}`)
+
+function handleClick(e) {
+    e.preventDefault()
+
+    const movieTitle = searchEl.value.trim()
+    let htmlEl = ""
+
+    if(!movieTitle){
+        return
+    }
+
+    fetch(`https://www.omdbapi.com/?apikey=c67ce49e&s=${encodeURIComponent(movieTitle)}`)
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => data.forEach(function(movie) {
+        htmlEl += `            <div>
+    <img src="${movie.poster}">
+    <h3>${movie.title}</h3>
+    <img src="star"><p>${movie.ratings.value}</p>
+    <div>
+        <p>${movie.runtime}</p>
+        <p>${movie.genre}</p>
+        <p><img src="img/circle-plus-solid-full.svg">watchlist</p>
+    </div>    
+</div>`
+
+            })
+document.getElementById("placeholder-section") = htmlEl
 }
 
 
