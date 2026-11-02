@@ -3,6 +3,14 @@ const placeholderEl = document.getElementById("placeholder-section")
 const movieResults = document.getElementById("movie-results")
 
 function handleRender() {
+
+
+    if (watchlistArr.length === 0) {
+        placeholderEl.classList.remove("hidden")
+        movieResults.innerHTML = ""
+        return
+    }
+
     const htmlRender = watchlistArr.map(movie => {
         return `
         <div class="movie-card">
@@ -33,16 +41,17 @@ function handleRender() {
 movieResults.addEventListener("click", function(e) {
     const button = e.target.closest(".watchlist-button")
 
-    if(!e.target) return
+    if(!button) return
     
     const movieId = button.dataset.id
 
-    const movieIndex = movieId.findIndex(movie => 
-        movie.imdID === movieId
+    const movieIndex = watchlistArr.findIndex(movie => 
+        movie.imdbID === movieId
     )
 
     if (movieIndex !== -1) {
         watchlistArr.splice(movieIndex, 1)
+        localStorage.setItem("watchlist", JSON.stringify(watchlistArr))
 
         handleRender()
     }
