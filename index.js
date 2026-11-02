@@ -33,11 +33,7 @@ function handleClick(e) {
             
 document.getElementById("placeholder-section").classList.add('hidden')
 
-
+document.getElementById("placeholder-section").innerHTML += htmlEl
 )}
 
-function render() {
-    document.getElementById("placeholder-section").innerHTML = handleClick()
-}
-
-formEl.addEventListener("submit", render)
+formEl.addEventListener("submit", handleClick)
