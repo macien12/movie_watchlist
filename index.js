@@ -29,7 +29,7 @@ function handleClick(e) {
 </div>`
 
             })
-document.getElementById("placeholder-section") = htmlEl
+
 )}
 
 
