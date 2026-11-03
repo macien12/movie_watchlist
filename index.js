@@ -103,6 +103,10 @@ movieResults.addEventListener("click", function(e) {
 
     if(selectedMovie) {
         handleWatchlist(selectedMovie)
+
+        button.textContent = "✓ Added to Watchlist"
+        button.classList.add("added")
+        button.disable = true
     }
 
 })
