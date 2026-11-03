@@ -1,19 +1,25 @@
-# Getting Started
-Install the dependencies and run the project
-```
+﻿# Movie Watchlist
+
+A movie search and watchlist project built while learning with Scrimba. Search for films using the OMDb API, add them to a watchlist, and remove them when you no longer need them. The watchlist is saved in the browser, so it is still there when you return.
+
+## What I learned
+
+Through this Scrimba project, I practised bringing HTML, CSS, and JavaScript together to build an interactive app. In particular, I learned how to:
+
+- Fetch movie data from an API, convert responses to JSON, and use `Promise.all()` to load details for multiple movies.
+- Handle form submissions and use JavaScript to render movie cards in the DOM.
+- Use event delegation and `data` attributes to identify which movie was clicked.
+- Work with arrays using `map()`, `find()`, `some()`, and `filter()` to display, add, and remove movies while avoiding duplicates.
+- Store and retrieve a watchlist with `localStorage`, `JSON.stringify()`, and `JSON.parse()`.
+- Style layouts and interactive states with CSS, including Flexbox, Grid, and hover and focus styles.
+
+## Run locally
+
+Install the dependencies and start the Vite development server:
+
+```bash
 npm install
 npm start
 ```
 
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
-
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Fullstack Developer Path aims to teach you everything you need to become a Junior Developer, or you could go further with one of our advanced courses 🚀
-
-- [Our courses](https://scrimba.com/courses)
-- [The Frontend Career Path](https://scrimba.com/fullstack-path-c0fullstack)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
-
-Happy Coding!
+Open the local URL shown in the terminal. Movie searches require an internet connection to reach the [OMDb API](https://www.omdbapi.com/).
